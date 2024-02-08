@@ -5,29 +5,28 @@ const App = () => {
   const [expenses, setExpenses] = useState([
     {
       title: "Car Insurance",
-      amount: "294.64",
+      amount: 294.64,
       location: "Mumbai",
-      date: new Date(2023, 1, 11),
+      date: new Date(2024, 2, 11),
     },
     {
       title: "Toilet Paper",
-      amount: "29.64",
+      amount: 29.64,
       location: "Delhi",
       date: new Date(2023, 1, 11),
     },
     {
       title: "new Desk",
-      amount: "95.64",
+      amount: 95.64,
       location: "Patna",
       date: new Date(2023, 1, 11),
     },
   ]);
 
   const addExpenseHandler = (expense) => {
-    console.log("working");
-    let newExpenses = [...expenses, expense];
-    console.log(newExpenses);
-    setExpenses(newExpenses);
+    setExpenses((prevExpenses) => {
+      return [expense, ...prevExpenses];
+    });
   };
   return (
     <div>

@@ -1,7 +1,7 @@
 .expenses {
   display: flex;
   justify-content: center;
-  flex-direction: column-reverse;
+  flex-direction: column;
   padding: 1rem;
   background-color: rgb(31, 31, 31);
   margin: 2rem auto;
